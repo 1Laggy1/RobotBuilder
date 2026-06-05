@@ -44,3 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08c8920378a96428a8c535799adedd54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Robot
+  defaultParts:
+  - {fileID: 0}
