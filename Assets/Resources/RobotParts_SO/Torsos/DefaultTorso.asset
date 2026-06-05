@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1061bf042a0b5ccb1984f6ebcdb0844f, type: 3}
   m_Name: DefaultTorso
   m_EditorClassIdentifier: Assembly-CSharp::RobotPart_SO
-  partType: 0
+  partType: 1
   partName: Default Torso
-  prefab: {fileID: 0}
+  prefab: {fileID: 8401835208901364447, guid: d904def14bd5ae88a98e8fc9366be9a8, type: 3}
   PartUIImage: {fileID: 0}
   Weight: 20
   Power: 10

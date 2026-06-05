@@ -6,6 +6,6 @@ public class FromTorsoPart : RobotPart
     float YPartOffset;
     public virtual void AddOffset(Vector3 TorsoPosition)
     {
-        this.transform.position = new Vector3(0, TorsoPosition.y + YPartOffset, 0);
+        this.transform.localPosition = new Vector3(0, YPartOffset, 0);
     }
 }

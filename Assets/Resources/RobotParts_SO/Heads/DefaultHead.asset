@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RobotPart_SO
   partType: 0
   partName: Default Head
-  prefab: {fileID: 0}
+  prefab: {fileID: 8595961402003705617, guid: 8853b4a90b57a5998ac6ad6bee1ee707, type: 3}
   PartUIImage: {fileID: 0}
   Weight: 10
   Power: 5
