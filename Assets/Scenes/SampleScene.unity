@@ -7435,6 +7435,8 @@ MonoBehaviour:
   headColorDropdown: {fileID: 884701392}
   torsoColorDropdown: {fileID: 520104235}
   legsColorDropdown: {fileID: 2127023679}
+  mainCamera: {fileID: 330585545}
+  rotationSpeed: 5
 --- !u!4 &1842047647
 Transform:
   m_ObjectHideFlags: 0

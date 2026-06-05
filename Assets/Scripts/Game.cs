@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Game : MonoBehaviour
 {
@@ -26,6 +27,30 @@ public class Game : MonoBehaviour
     [SerializeField] private TMP_Dropdown headColorDropdown;
     [SerializeField] private TMP_Dropdown torsoColorDropdown;
     [SerializeField] private TMP_Dropdown legsColorDropdown;
+    [Header("Camera Orbit")]
+    [SerializeField] private Camera mainCamera;
+    [SerializeField] private float rotationSpeed = 5f;
+
+    void Update()
+    {
+        
+        if (Mouse.current != null && Mouse.current.rightButton.isPressed)
+        {
+            
+            Vector2 mouseDelta = Mouse.current.delta.ReadValue();
+            
+           
+            float mouseX = mouseDelta.x * 0.1f; 
+            float mouseY = mouseDelta.y * 0.1f;
+
+            if (mainCamera != null && robot_position != null)
+            {
+                mainCamera.transform.RotateAround(robot_position.position, Vector3.up, mouseX * rotationSpeed);
+                mainCamera.transform.RotateAround(robot_position.position, mainCamera.transform.right, -mouseY * rotationSpeed);
+                mainCamera.transform.LookAt(robot_position.position);
+            }
+        }
+    }
 
     public void UpdateStatsUI()
     {
@@ -157,12 +182,6 @@ private void SetupColorDropdown(TMP_Dropdown dropdown)
             if (array[i] == part) return i;
         }
         return 0;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     private void SetupDropdown(TMP_Dropdown dropdown, RobotPart_SO[] partsArray)
