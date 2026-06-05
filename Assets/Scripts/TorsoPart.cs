@@ -20,9 +20,17 @@ public class TorsoPart : RobotPart
         {
             InitializeDictionary();
         }
-        if (socketDictionary.ContainsKey(part.robotPart_SO.partType))
+        
+        PartType type = part.robotPart_SO.partType; 
+        
+        if (socketDictionary.ContainsKey(type))
         {
-            part.AddOffset(socketDictionary[part.robotPart_SO.partType].position);
+            Transform socket = socketDictionary[type];
+            part.transform.SetParent(socket);
+            
+            part.transform.localPosition = Vector3.zero; 
+            
+            part.AddOffset(socket.localPosition); 
         }
     }
     void InitializeDictionary()

@@ -7,12 +7,17 @@ public class RobotPart : MonoBehaviour
     public RobotPart_SO robotPart_SO{ get; private set; }
     [SerializeField] 
     Animator partAnimator;
-    
+    void Start()
+    {
+        
+        if (partAnimator != null) partAnimator.enabled = false;
+    }
 
     public virtual void PlayActionAnim()
     {
         if (partAnimator != null)
         {
+            partAnimator.enabled = true;
             partAnimator.SetTrigger("Action");
         }
     }

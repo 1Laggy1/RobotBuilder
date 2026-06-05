@@ -45,4 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Robot
   defaultParts:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: a624eb47d79a4b2a4b2e8cecfd1213a7, type: 2}
+  - {fileID: 11400000, guid: 7542c9e783508d1b497fdf7b422e6006, type: 2}
+  - {fileID: 11400000, guid: be6ce59a56e7b7041b868dafbadd1a62, type: 2}

@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1061bf042a0b5ccb1984f6ebcdb0844f, type: 3}
   m_Name: DefaultLegs
   m_EditorClassIdentifier: Assembly-CSharp::RobotPart_SO
-  partType: 0
+  partType: 2
   partName: Default Legs
-  prefab: {fileID: 0}
+  prefab: {fileID: 5554858695387382932, guid: b2cfe28a316a45f5395663ee02f8b3c0, type: 3}
   PartUIImage: {fileID: 0}
-  Weight: 0
-  Power: 0
+  Weight: 5
+  Power: 2
